@@ -14,22 +14,19 @@ but it also applies to multi-tenancy applications.
 Hiera-PHP tries to be as much of a direct port as possible, maintaining
 support for original configuration files, and even internal classnames and interfaces.
 
-## Status
+## Features
 
-### Available now:
+* [x] Supports loading original `hiera.yaml` files
+* [x] Supports pluggable backends
+* [x] Yaml backend included (supporting original configuration yaml files)
+* [x] Command line utility to perform lookups
+* [x] Embeddable as a library
+* [ ] Json backend
+* [ ] Database (PDO, Redis, etc) backends
+* [ ] Memcached backend
+* [ ] Array merge strategies
 
-* Supports loading original `hiera.yaml` files
-* Supports pluggable backends
-* Yaml backend included (supporting original configuration yaml files)
-* Command line utility to perform lookups
-* Embeddable as a library
-
-### Todo
-
-[ ] Json backend
-[ ] Database (PDO, Redis, etc) backends
-[ ] Memcached backend
-[ ] Array merge strategies
+Contributions are very welcome!
 
 ## License
 
