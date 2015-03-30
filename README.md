@@ -11,6 +11,26 @@ Hiera uses a configurable hierarchy to enable "Cascading Configuration".
 It's great for infrastructure configuration (which is why it's used in Puppet),
 but it also applies to multi-tenancy applications.
 
+Hiera-PHP tries to be as much of a direct port as possible, maintaining
+support for original configuration files, and even internal classnames and interfaces.
+
+## Status
+
+### Available now:
+
+* Supports loading original `hiera.yaml` files
+* Supports pluggable backends
+* Yaml backend included (supporting original configuration yaml files)
+* Command line utility to perform lookups
+* Embeddable as a library
+
+### Todo
+
+[ ] Json backend
+[ ] Database (PDO, Redis, etc) backends
+[ ] Memcached backend
+[ ] Array merge strategies
+
 ## License
 
 MIT (see [LICENSE.md](LICENSE.md))
