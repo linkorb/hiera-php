@@ -1,0 +1,29 @@
+
+{
+    "name": "linkorb/hiera-php",
+    "description": "A PHP implementation of Hiera",
+    "keywords": ["hiera", "hierarchical database", "feature flags", "config"],
+    "license": "MIT",
+    "type": "library",
+    "authors": [
+        {
+            "name": "Joost Faassen",
+            "email": "j.faassen@linkorb.com",
+            "homepage": "http://www.linkorb.com",
+            "role": "Developer"
+        }
+    ],
+    "support": {
+        "issues": "https://github.com/linkorb/hiera-php/issues"
+    },
+    "require": {
+        "symfony/console": "~2.4",
+        "symfony/yaml": "~2.6"
+    },
+    "bin": ["bin/hiera-php"],
+    "autoload": {
+        "psr-4": {
+            "Hiera\\": "src/"
+        }
+    }
+}

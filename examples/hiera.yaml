@@ -1,0 +1,12 @@
+---
+:backends:
+  - yaml
+  - json
+:yaml:
+  :datadir: hieradata
+:json:
+  :datadir: hieradata
+:hierarchy:
+  - "node/%{::clientcert}"
+  - "environment/%{::environment}"
+  - common

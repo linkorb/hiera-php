@@ -1,0 +1,3 @@
+---
+# string
+apache-service: apache2_prod_web01_dc1_%{::country}
