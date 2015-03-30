@@ -14,6 +14,37 @@ but it also applies to multi-tenancy applications.
 Hiera-PHP tries to be as much of a direct port as possible, maintaining
 support for original configuration files, and even internal classnames and interfaces.
 
+## Usage
+
+hiera-php can be used both as a library, and as a console-tool
+
+### Library
+
+```php
+use Hiera\Hiera;
+use Hiera\Scope;
+use Hiera\ConfigLoader\YamlConfigLoader;
+
+$scope = new Scope();
+$scope->setVariable('::environment', 'production');
+$scope->setVariable('::clientcert', 'web01.dc1.example.webx');
+$scope->setVariable('::country', 'nl');
+$hiera = new Hiera();
+$loader = new YamlConfigLoader();
+$loader->load($hiera, $path_to_hiera_yaml_file);
+
+$key = 'some_configuration_key';
+$answer = $hiera->lookup($key, '#default#', $scope);
+```
+
+
+### Console tool
+
+```
+vendor/bin/hiera-php hiera:lookup some_configuration_key
+```
+
+
 ## Features
 
 * [x] Supports loading original `hiera.yaml` files
